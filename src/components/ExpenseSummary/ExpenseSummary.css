@@ -1,0 +1,16 @@
+.summary {
+  background: #e3f2fd; /* Light blue background */
+  padding: 16px; /* Space inside box */
+  margin: 15px 0; /* Gap top & bottom */
+  border-radius: 6px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  line-height: 1.4;
+  color: #1976d2; /* Dark blue text */
+  text-align: center; /* Center align */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Small shadow */
+}
+
+.summary h2 {
+  font-size: 22px;
+  margin: 0;
+}

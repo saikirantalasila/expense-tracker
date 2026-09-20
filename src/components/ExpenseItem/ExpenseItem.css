@@ -1,0 +1,73 @@
+.expense-item {
+  width: 220px;
+  max-width: 100%;
+  padding: 16px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  min-height: 150px;
+  border: 1px solid #ddd;
+  opacity: 0.95;
+  transition: transform 0.2s;
+}
+.expense-item:hover {
+  transform: translateY(-5px);
+}
+
+.expense-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.expense-item p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+.expense-item p:first-of-type {
+  font-weight: bold;
+  color: #4caf50;
+}
+.expense-item p:last-of-type {
+  color: #666;
+  font-size: 14px;
+}
+
+.card-actions {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.card-actions button {
+  padding: 8px 12px;
+  flex: 1;
+  font-weight: bold;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.card-actions .edit-btn {
+  background-color: #4caf50;
+}
+.card-actions .edit-btn:hover {
+  background-color: #45a049;
+}
+
+.card-actions .delete-btn {
+  background-color: #f44336;
+}
+.card-actions .delete-btn:hover {
+  background-color: #da190b;
+}
+
+@media (max-width: 600px) {
+  .expense-item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+.date-filter {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.date-filter label {
+  font-weight: bold;
+  margin: 0 8px;
+  color: #388e3c; /* Green accent */
+}
+
+.date-filter select {
+  padding: 8px 12px;
+  margin: 0 8px;
+  border-radius: 6px;
+  border: 1px solid #388e3c;
+  background-color: #e8f5e9; /* Light green background */
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.date-filter select:hover {
+  background-color: #c8e6c9; /* Slightly darker hover */
+}

@@ -1,0 +1,90 @@
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.login-container h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-email {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}
+.login-email:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.login-password {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 40px 10px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}
+.login-password:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.password-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  color: black;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #333;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 16px;
+  transition:
+    opacity 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #222;
+}
+.login-button:focus {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}

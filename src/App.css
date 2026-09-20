@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+button:hover {
+  opacity: 0.8;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+}
