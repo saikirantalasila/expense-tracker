@@ -11,8 +11,15 @@ import ConfirmModal from "./components/ConfirmModal/ConfirmModal";
 import "./App.css";
 
 const App = () => {
-  // 1.All States
-  const [expenses, setExpenses] = useState(initialExpenses);
+  // 1. Load expenses from localStorage
+  const savedExpenses = localStorage.getItem("expenses");
+
+  const parsedExpenses = savedExpenses
+    ? JSON.parse(savedExpenses)
+    : initialExpenses;
+
+  // 2. State
+  const [expenses, setExpenses] = useState(parsedExpenses);
 
   const [editingExpense, setEditingExpense] = useState(null);
 
@@ -25,13 +32,19 @@ const App = () => {
 
   const location = useLocation();
 
+  // 3. Effects
+
   useEffect(() => {
     if (location.pathname !== "/") {
       setEditingExpense(null);
     }
   }, [location.pathname]);
 
-  // 2.Handlers(functions)
+  useEffect(() => {
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+  }, [expenses]);
+
+  // 4. Handlers(functions)
 
   const confirmDelete = () => {
     setExpenses((prev) => prev.filter((expense) => expense.id !== deleteId));
@@ -67,7 +80,8 @@ const App = () => {
     setEditingExpense(null);
   };
 
-  // 3. Filter logic
+  // 5. Filter Logic
+
   const filteredExpenses = expenses.filter((expense) => {
     const expenseDate = new Date(expense.date);
 
@@ -84,6 +98,8 @@ const App = () => {
 
     return monthMatch && categoryMatch && yearMatch;
   });
+
+  // 6. JSX
 
   return (
     <>
