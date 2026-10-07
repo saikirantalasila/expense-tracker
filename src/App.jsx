@@ -29,6 +29,7 @@ const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const location = useLocation();
 
@@ -96,7 +97,11 @@ const App = () => {
     const categoryMatch =
       selectedCategory === "" || expense.category === selectedCategory;
 
-    return monthMatch && categoryMatch && yearMatch;
+    const searchMatch =
+      searchTerm === "" ||
+      expense.title.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return monthMatch && categoryMatch && yearMatch && searchMatch;
   });
 
   // 6. JSX
@@ -121,6 +126,8 @@ const App = () => {
               setSelectedMonth={setSelectedMonth}
               selectedYear={selectedYear}
               setSelectedYear={setSelectedYear}
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
               onCancelEdit={handleCancelEdit}
             />
           }

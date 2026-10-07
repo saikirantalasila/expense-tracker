@@ -17,6 +17,8 @@ const Dashboard = ({
   setSelectedMonth,
   selectedYear,
   setSelectedYear,
+  searchTerm,
+  setSearchTerm,
   onCancelEdit,
 }) => {
   return (
@@ -34,6 +36,16 @@ const Dashboard = ({
           selectedYear={selectedYear}
           setSelectedYear={setSelectedYear}
         />
+        <div className="search-filter">
+          <label htmlFor="expense-search">Search:</label>
+          <input
+            id="expense-search"
+            type="text"
+            placeholder="search expenses..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
       </div>
       <ExpenseForm
         onAddExpense={onAddExpense}
