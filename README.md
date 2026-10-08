@@ -90,42 +90,67 @@ The application will be available at the local development URL provided by Vite.
 
 ## Project Structure
 
-```text
-
-expense-tracker/
-
-├── public/
-
-├── src/
-
-│ ├── assets/
-
-│ ├── components/
-
-│ ├── data/
-
-│ ├── pages/
-
-│ ├── App.jsx
-
-│ └── main.jsx
-
-├── screenshots/
-
-│ ├── dashboard.png
-
-│ ├── expense-form.png
-
-│ ├── login.png
-
-│ └── reports.png
-
-├── package.json
-
-├── vite.config.js
-
-└── README.md
-
+```
+├── 📁 public
+│   ├── 🖼️ favicon.svg
+│   └── 🖼️ icons.svg
+├── 📁 screenshots
+│   ├── 🖼️ dashboard.png
+│   ├── 🖼️ expense-form.png
+│   ├── 🖼️ login.png
+│   └── 🖼️ reports.png
+├── 📁 src
+│   ├── 📁 assets
+│   │   └── 🖼️ vite.svg
+│   ├── 📁 components
+│   │   ├── 📁 ConfirmModal
+│   │   │   ├── 🎨 ConfirmModal.css
+│   │   │   └── 📄 ConfirmModal.jsx
+│   │   ├── 📁 ExpenseFilter
+│   │   │   ├── 🎨 ExpenseCategoryFilter.css
+│   │   │   ├── 📄 ExpenseCategoryFilter.jsx
+│   │   │   ├── 🎨 ExpenseDateFilter.css
+│   │   │   └── 📄 ExpenseDateFilter.jsx
+│   │   ├── 📁 ExpenseForm
+│   │   │   ├── 🎨 ExpenseForm.css
+│   │   │   └── 📄 ExpenseForm.jsx
+│   │   ├── 📁 ExpenseItem
+│   │   │   ├── 🎨 ExpenseItem.css
+│   │   │   └── 📄 ExpenseItem.jsx
+│   │   ├── 📁 ExpenseList
+│   │   │   ├── 🎨 ExpenseList.css
+│   │   │   └── 📄 ExpenseList.jsx
+│   │   ├── 📁 ExpenseSummary
+│   │   │   ├── 🎨 ExpenseSummary.css
+│   │   │   └── 📄 ExpenseSummary.jsx
+│   │   └── 📁 Navbar
+│   │       ├── 🎨 Navbar.css
+│   │       └── 📄 Navbar.jsx
+│   ├── 📁 data
+│   │   └── 📄 expenses.js
+│   ├── 📁 pages
+│   │   ├── 📁 AddExpense
+│   │   │   └── 📄 AddExpense.jsx
+│   │   ├── 📁 Dashboard
+│   │   │   ├── 🎨 Dashboard.css
+│   │   │   └── 📄 Dashboard.jsx
+│   │   ├── 📁 Login
+│   │   │   ├── 🎨 Login.css
+│   │   │   └── 📄 Login.jsx
+│   │   └── 📁 Reports
+│   │       ├── 🎨 Reports.css
+│   │       └── 📄 Reports.jsx
+│   ├── 🎨 App.css
+│   ├── 📄 App.jsx
+│   ├── 🎨 index.css
+│   └── 📄 main.jsx
+├── ⚙️ .gitignore
+├── 📝 README.md
+├── 📄 eslint.config.js
+├── 🌐 index.html
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+└── 📄 vite.config.js
 ```
 
 ## Screenshots
