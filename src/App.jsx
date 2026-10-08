@@ -31,6 +31,8 @@ const App = () => {
   const [selectedYear, setSelectedYear] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
+  const [sortOption, setSortOption] = useState("");
+
   const location = useLocation();
 
   // 3. Effects
@@ -104,6 +106,22 @@ const App = () => {
     return monthMatch && categoryMatch && yearMatch && searchMatch;
   });
 
+  const sortedExpenses = [...filteredExpenses].sort((a, b) => {
+    if (sortOption === "amount-low") {
+      return a.amount - b.amount;
+    }
+    if (sortOption === "amount-high") {
+      return b.amount - a.amount;
+    }
+    if (sortOption === "date-new") {
+      return new Date(b.date) - new Date(a.date);
+    }
+    if (sortOption === "date-old") {
+      return new Date(a.date) - new Date(b.date);
+    }
+    return 0;
+  });
+
   // 6. JSX
 
   return (
@@ -114,7 +132,7 @@ const App = () => {
           path="/"
           element={
             <Dashboard
-              expenses={filteredExpenses}
+              expenses={sortedExpenses}
               totalExpenses={expenses}
               onAddExpense={addExpenseHandler}
               onDeleteExpense={handleDeleteClick}
@@ -128,6 +146,8 @@ const App = () => {
               setSelectedYear={setSelectedYear}
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
+              sortOption={sortOption}
+              setSortOption={setSortOption}
               onCancelEdit={handleCancelEdit}
             />
           }

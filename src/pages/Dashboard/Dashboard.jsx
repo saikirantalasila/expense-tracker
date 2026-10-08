@@ -19,6 +19,8 @@ const Dashboard = ({
   setSelectedYear,
   searchTerm,
   setSearchTerm,
+  sortOption,
+  setSortOption,
   onCancelEdit,
 }) => {
   return (
@@ -45,6 +47,20 @@ const Dashboard = ({
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
+          <div className="sort-filter">
+            <label htmlFor="sort-expenses">Sort:</label>
+            <select
+              id="sort-expenses"
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+            >
+              <option value="">Default</option>
+              <option value="amount-low">Amount: Low → High</option>
+              <option value="amount-high">Amount: High → Low</option>
+              <option value="date-new">Date: Newest → Oldest</option>
+              <option value="date-old">Date: Oldest → Newest</option>
+            </select>
+          </div>
         </div>
       </div>
       <ExpenseForm
